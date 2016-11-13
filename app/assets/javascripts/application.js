@@ -12,5 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require action_cable
+//= require channels/rooms
+//= require_self
+
+
+
+(function() {
+  this.App || (this.App = {});
+
+  App.cable = ActionCable.createConsumer();
+
+}).call(this);
