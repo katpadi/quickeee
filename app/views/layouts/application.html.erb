@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LolchatRails5</title>
+    <title>Quickieee!</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+    <%= render 'layouts/nav' %>
+    <div class="container">
     <%= yield %>
+    </div>
+<footer class="text-muted">
+      <div class="container">
+        <p class="float-xs-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Quickieee! © is a troll app for practicing Action Cable features.</p>
+        <p>Please do not take me seriously. If you're asking <a href="http://katpadi.ph">Hu u?</a> right now, click the link.</p>
+      </div>
+    </footer>
   </body>
 </html>

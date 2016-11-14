@@ -1,1 +1,9 @@
-<li><%= link_to "Enter #{chat_room.title}", chat_room_path(chat_room) %></li>
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title"><%= link_to "#{chat_room.title}", chat_room_path(chat_room) %></h4>
+    <p class="card-text"><%= chat_room.description %></p>
+    <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(chat_room.updated_at) %> ago</small></p>
+  </div>
+
+</div>
+

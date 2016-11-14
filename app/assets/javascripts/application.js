@@ -12,15 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require action_cable
-//= require channels/rooms
-//= require_self
-
-
-
-(function() {
-  this.App || (this.App = {});
-
-  App.cable = ActionCable.createConsumer();
-
-}).call(this);
+//= require tether
+//= require bootstrap-sprockets
+//= require_tree .

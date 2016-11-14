@@ -1,7 +1,18 @@
-<h1>Chat rooms</h1>
 
-<p class="lead"><%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary' %></p>
+<section class="jumbotron text-xs-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Quickieee!</h1>
+        <p class="lead text-muted">This is a simple web chat. ... Create new chat rooms in seconds. ... Need a quickie? Get a room!</p>
+        <p>
+           <%= link_to 'Check In to A New Room', new_chat_room_path, class: 'btn btn-primary' %>
+        </p>
+      </div>
+    </section>
 
-<ul>
-  <%= render @chat_rooms %>
-</ul>
+<div class="card-deck-wrapper">
+  <div class="card-deck">
+    <%= render @chat_rooms %>
+
+</div>
+</div>
+
