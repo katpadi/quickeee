@@ -5,9 +5,12 @@
   <div class="col-md-11">
     <div class="row">
     <p class="col-md-8 name"><%= message.user.name %></p>
-    <p class="col-md-4"><small class=" time"><i class="fa fa-clock-o"></i> <%=  message.created_at.strftime("%b %e, %Y %I:%M %p") %></small></p>
+    <p class="col-md-4"><small class=" time"><i class="fa fa-clock-o"></i> <%= format_datetime_to_local(message.created_at) %></small></p>
     </div>
     <%= message.body %>
 
   </div>
 </div>
+
+
+

@@ -1,3 +1,9 @@
+window.BrowserTZone ||= {}
+BrowserTZone.setCookie = ->
+  $.cookie "current_timezone", jstz.determine().name(), { expires: 365, path: '/' }
+jQuery ->
+  BrowserTZone.setCookie()
+
 $(document).ready ->
   messages_to_bottom = undefined
   messages = $('#messages')
