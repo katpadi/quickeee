@@ -1,7 +1,6 @@
 class ChatRoomsController < ApplicationController
   def index
-    puts current_user.name
-    @chat_rooms = ChatRoom.all
+    @chat_rooms = ChatRoom.all.order(updated_at: :desc)
   end
 
   def new
@@ -26,6 +25,6 @@ class ChatRoomsController < ApplicationController
   private
 
   def chat_room_params
-    params.require(:chat_room).permit(:title, :description)
+    params.require(:chat_room).permit(:title, :description, :ephemeral)
   end
 end

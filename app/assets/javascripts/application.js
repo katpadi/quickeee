@@ -15,20 +15,3 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require_tree .
-
-// $('#message_body').keypress(function(e){
-//   if(e.which == 13){
-//        $(this).closest('form').submit();
-//    }
-// });
-
-// $(function() {
-//     $("#message_body").keypress(function (e) {
-//         if(e.which == 13) {
-//             //submit form via ajax, this is not JS but server side scripting so not showing here
-//             $("#chatbox").append($(this).val() + "<br/>");
-//             $(this).val("");
-//             e.preventDefault();
-//         }
-//     });
-// });

@@ -1,19 +1,13 @@
-
-
-
 <div class="media msg">
-
-      <div class="col-md-1">
-        <%= gravatar_for message.user %>
-      </div>
-    <div class="col-md-11 ">
-      <div class="alert row alert-info" role="alert">
-      <p class="media-heading"><%= message.user.name %>
-        <small class="text-muted time"><i class="fa fa-clock-o"></i> <%= time_ago_in_words(message.created_at) %> ago</small>
-      </p>
-      <strong><%= message.body %></strong>
-      </div>
+  <div class="col-md-1">
+    <%= gravatar_for message.user %>
+  </div>
+  <div class="col-md-11">
+    <div class="row">
+    <p class="col-md-8 name"><%= message.user.name %></p>
+    <p class="col-md-4"><small class=" time"><i class="fa fa-clock-o"></i> <%=  message.created_at.strftime("%b %m, %Y %I:%M %p") %></small></p>
     </div>
+    <%= message.body %>
 
-
+  </div>
 </div>
