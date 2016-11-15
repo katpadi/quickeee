@@ -1,4 +1,5 @@
 class ChatRoomsController < ApplicationController
+  before_action :authenticate_user!, :except => [:index]
   def index
     @chat_rooms = ChatRoom.all.order(updated_at: :desc)
   end
