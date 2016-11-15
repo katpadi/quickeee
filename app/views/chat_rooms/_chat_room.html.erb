@@ -1,11 +1,9 @@
 <div class="card card-block">
     <h4 class="card-title"><%= link_to "#{chat_room.title}", chat_room_path(chat_room) %></h4>
-
     <p class="card-text"><%= chat_room.description %></p>
     <p class="card-text">
     <small class="text-muted">Created by
     <%= link_to "#{chat_room.user.name}", '#' %>
     <%= chat_room.updated_at.strftime(" @ %m/%e/%Y %w%p") %></small></p>
-
 </div>
 

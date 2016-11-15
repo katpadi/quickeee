@@ -1,7 +1,13 @@
 <div class=" text-center">
     <div class="box">
+        <%= link_to chat_room_path(@chat_room), method: :delete do %>
+          <i class="fa fa-trash-o"></i>
+        <% end %>
+        <%= link_to edit_chat_room_path(@chat_room) do %>
+          <i class="fa fa-pencil"></i>
+        <% end %>
         <div class="box-content">
-            <h1 class="tag-title"><%= @chat_room.title %> </h1>
+            <h3 class="tag-title"><%= @chat_room.title %> </h3>
             <small><%= @chat_room.description %></small>
         </div>
         <div>
