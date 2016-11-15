@@ -9,8 +9,8 @@
           <ul class="list-unstyled">
             <li><a href="#">@katpadi</a></li>
             <li><a href="hello@katpadi.ph">email</a></li>
-            <% if @current_user %>
-            <%= link_to "Check out", destroy_user_session_path, method: :delete %> </li>
+            <% if current_user %>
+              <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
             <% end %>
           </ul>
         </div>

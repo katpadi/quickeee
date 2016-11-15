@@ -1,13 +1,16 @@
 <div class=" text-center">
     <div class="box">
-        <div class="pull-right">
-          <%= link_to chat_room_path(@chat_room), method: :delete do %>
-            <i class="fa fa-trash-o"></i>
-          <% end %>
-          <%= link_to edit_chat_room_path(@chat_room) do %>
-            <i class="fa fa-pencil"></i>
-          <% end %>
-        </div>
+        <% if current_user == @chat_room.user  %>
+          <div class="pull-right">
+            <%= link_to chat_room_path(@chat_room), method: :delete do %>
+              <i class="fa fa-trash-o"></i>
+            <% end %>
+             |
+            <%= link_to edit_chat_room_path(@chat_room) do %>
+              <i class="fa fa-pencil"></i>
+            <% end %>
+          </div>
+        <% end %>
         <div class="box-content">
             <h3 class="tag-title"><%= @chat_room.title %> </h3>
             <small><%= @chat_room.description %></small>
