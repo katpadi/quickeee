@@ -1,4 +1,4 @@
-<h1>Add a new room</h1>
+<h1>Create a new room</h1>
 
 <%= form_for @chat_room do |f| %>
   <div class="form-group">
@@ -12,5 +12,5 @@
     <%= f.text_field :description, autofocus: true, class: 'form-control' %>
 </div>
 
-  <%= f.submit "Check In", class: 'btn btn-primary' %>
+  <%= f.submit "Create", class: 'btn btn-primary' %>
 <% end %>
