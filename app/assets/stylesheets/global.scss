@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .name {
@@ -214,3 +214,6 @@ body::-webkit-scrollbar {
     background: #ddd;
 }
 
+small, .small {
+    font-size: 65%;
+}

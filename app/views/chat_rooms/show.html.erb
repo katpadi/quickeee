@@ -5,7 +5,7 @@
             <%= link_to chat_room_path(@chat_room), method: :delete do %>
               <i class="fa fa-trash-o"></i>
             <% end %>
-             |
+
             <%= link_to edit_chat_room_path(@chat_room) do %>
               <i class="fa fa-pencil"></i>
             <% end %>
@@ -13,7 +13,7 @@
         <% end %>
         <div class="box-content">
             <h3 class="tag-title"><%= @chat_room.title %> </h3>
-            <small><%= @chat_room.description %></small>
+            <p><%= @chat_room.description %></p>
         </div>
         <div>
           <div class="message-wrap">

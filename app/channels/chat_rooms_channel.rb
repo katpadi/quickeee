@@ -10,11 +10,6 @@ class ChatRoomsChannel < ApplicationCable::Channel
 
   def send_message(data)
     current_user.messages.create!(body: data['message'], chat_room_id: data['chat_room_id'])
-    puts "from channel..."
-    timezone = Time.find_zone(cookies[:current_timezone])
-    Time.use_zone(timezone) { yield }
-    puts cookies[:current_timezone]
-    puts timezone
   end
 
 end

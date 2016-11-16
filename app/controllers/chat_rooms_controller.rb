@@ -19,7 +19,7 @@ class ChatRoomsController < ApplicationController
   end
 
   def edit
-    @chat_room = current_user.chat_rooms.find_by(id: params[:id])
+    @chat_room = ChatRoom.find_by(id: params[:id])
   end
 
   def update
@@ -34,7 +34,7 @@ class ChatRoomsController < ApplicationController
   end
 
   def destroy
-    @chat_room = current_user.chat_rooms.find_by(id: params[:id])
+    @chat_room = ChatRoom.find_by(id: params[:id])
     @chat_room.destroy
     if @chat_room.save
       flash[:success] = 'Chat room deleted'
