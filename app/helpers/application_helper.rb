@@ -6,7 +6,11 @@ module ApplicationHelper
   end
 
   def format_datetime_to_local(datetime)
-    datetime.in_time_zone(current_timezone).strftime("%b %e, %Y %I:%M %p")
+    datetime.in_time_zone('Asia/Manila').strftime("%b %e, %Y %I:%M %p")
+  end
+
+  def katpadi?
+    current_user.email == 'katpadillaaa@gmail.com'
   end
 end
 

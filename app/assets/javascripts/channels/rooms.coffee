@@ -1,9 +1,3 @@
-window.BrowserTZone ||= {}
-BrowserTZone.setCookie = ->
-  $.cookie "current_timezone", jstz.determine().name(), { expires: 365, path: '/' }
-jQuery ->
-  BrowserTZone.setCookie()
-
 $(document).ready ->
   messages_to_bottom = undefined
   messages = $('#messages')
@@ -26,7 +20,6 @@ $(document).ready ->
           chat_room_id: chat_room_id
     )
     return $('#message_body').keypress((e) ->
-      console.log("Enter key...........")
       if e.which == 13 || e.keyCode == 13
         if $.trim($(this).val()).length > 1
           App.global_chat.send_message $(this).val(), messages.data('chat-room-id')
